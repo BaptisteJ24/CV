@@ -1,0 +1,185 @@
+h1{
+  color: rgb(17, 19, 17);
+}
+
+.r-link {
+    display: var(--rLinkDisplay, inline-flex) !important;
+}
+      
+.r-link[href] {
+        color: var(--rLinkColor) !important;
+        text-decoration: var(--rLinkTextDecoration, none) !important;
+}
+      
+.r-list {
+  padding-left: var(--rListPaddingLeft, 0) !important;
+  margin-top: var(--rListMarginTop, 0) !important;
+  margin-bottom: var(--rListMarginBottom, 0) !important;
+  list-style: var(--rListListStyle, none) !important;
+}
+      
+/*
+=====
+CORE STYLES
+=====
+*/
+      
+.menu {
+  --rLinkColor: var(--menuLinkColor, currentColor);
+}
+      
+.menu__link {
+  display: var(--menuLinkDisplay, block);
+}
+      
+.menu__link:focus {
+  outline: var(--menuLinkOutlineWidth, 2px) solid
+          var(--menuLinkOutlineColor, currentColor);
+  outline-offset: var(--menuLinkOutlineOffset);
+}
+
+.menu:hover .menu__link:not(:hover) {
+  --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, 0.35));
+}
+      
+/*
+=====
+PRESENTATION STYLES
+=====
+*/
+      
+.menu {
+  background-color: var(--menuBackgroundColor, #f4f4f4);
+  box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24));
+  width: 1240px; 
+}
+      
+
+
+.menu__list {
+  display: flex;
+}
+      
+.menu__link {
+  width : 20%;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box ;
+  height: 90px;
+  vertical-align:middle;
+  align-items: center;
+}
+      
+/* 
+=====
+TEXT UNDERLINED
+=====
+*/
+      
+.text-underlined {
+  position: relative;
+  overflow: hidden;
+  will-change: color;
+  transition: color 0.25s ease-out;
+}
+      
+.text-underlined::before,
+.text-underlined::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--textUnderlinedLineColor, currentColor);
+  will-change: width;
+  transition: width 0.1s ease-out;
+  position: absolute;
+  bottom: 0;
+}
+      
+.text-underlined::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+      
+.text-underlined::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+      
+.text-underlined:hover::before,
+.text-underlined:hover::after {
+  width: 100%;
+  transition-duration: 0.2s;
+}
+      
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#menu2 {
+  width: 1240px;
+  background-color: white;
+  justify-content: space-between;
+  display :flex;
+  flex-wrap: wrap;
+}
+
+.menu__link2{
+  width : 250px;
+  height: 70px;
+  padding : 15px;
+  margin-top: 8px;
+  margin-bottom: 3px;
+  margin-right: auto;
+  margin-left: auto;
+
+  
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px 2px #aaa;
+  
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  
+  
+  justify-content: center;
+  text-align: center;
+  vertical-align:middle;
+  align-items: center; 
+}
+
+
+
+.menu__link2:hover{
+  background-color: #353B49;
+  --rLinkColor: var(--menuLinkColorChange, white);
+}
+
+
+.menu__link2::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+      
+.menu__link2::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+
+.menu__link2::after,
+.menu__link2::before{
+  background-color: var(--textUnderlinedLineColor, currentColor);
+}
+
+.menu__link2:hover::before,
+.menu__link2:hover::after{
+  width: 100%;
+  transition-duration: 0.2s;
+}
