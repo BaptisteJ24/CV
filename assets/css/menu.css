@@ -128,6 +128,7 @@ body {
   justify-content: space-between;
   display :flex;
   flex-wrap: wrap;
+  margin-bottom: 15px;
 }
 
 .menu__link2{
