@@ -7,7 +7,7 @@ padding:0;
 vertical-align:baseline;
 }
 
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav {
 display:block;
 }
 
@@ -161,6 +161,7 @@ margin-top : -18px;
 section {
 	/*border-top: 1px solid #dedede;*/
 	padding: 20px 0 0;
+	
 }
 
 section:first-child {

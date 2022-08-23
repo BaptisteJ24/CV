@@ -154,32 +154,7 @@ body {
   align-items: center; 
 }
 
-
-
 .menu__link2:hover{
   background-color: #353B49;
   --rLinkColor: var(--menuLinkColorChange, white);
-}
-
-
-.menu__link2::before {
-  left: 50%;
-  transform: translateX(-50%);
-}
-      
-.menu__link2::after {
-  right: 50%;
-  transform: translateX(50%);
-}
-
-
-.menu__link2::after,
-.menu__link2::before{
-  background-color: var(--textUnderlinedLineColor, currentColor);
-}
-
-.menu__link2:hover::before,
-.menu__link2:hover::after{
-  width: 100%;
-  transition-duration: 0.2s;
 }
