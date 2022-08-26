@@ -114,13 +114,13 @@ TEXT UNDERLINED
   transition-duration: 0.2s;
 }
       
-body {
+/*body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
+}*/
 
 #menu2 {
   width: 1240px;
