@@ -34,23 +34,25 @@ let formationTable = [openClassrooms, licencePsy, btsSIO, bacES];
 function LoadFormationContent() {
     var i = 0;
     for (formationClass in formationTable) {
-        let liFormation = document.createElement('li');
-        liFormation.setAttribute('id','liFormation'+i);
+        let divFormation = document.createElement('div');
+        divFormation.setAttribute('class','div_Experience_Container');
+        divFormation.setAttribute('id','divFormation'+i);
 
-        let divLeft = document.createElement('div');
-        divLeft.setAttribute('id','divLeft'+i)
-        divLeft.setAttribute('class','divLeft')
+        let divDate = document.createElement('div');
+        divDate.setAttribute('class','div_Date');
+        divDate.setAttribute('id', 'div_Date_Formation'+i);
 
-        let divRight = document.createElement('div');
-        divRight.setAttribute('id','divRight'+i);
-        divRight.setAttribute('class','divRight');
+        let divImageText = document.createElement('div');
+        divImageText.setAttribute('class','div_Image_Text');
+        divImageText.setAttribute('id', 'div_ImageText_Formation'+i);
 
-        let divRightRight = document.createElement('div');
-        divRightRight.setAttribute('id','divRightRight'+i),('class','divRightRight');
+        let divImages = document.createElement('div');
+        divImages.setAttribute('class','div_Images');
+        divImages.setAttribute('id', 'div_Images_Formation'+i);
 
-        let divRightLeft = document.createElement('div');
-        divRightLeft.setAttribute('id','divRightLeft'+i);
-        divRightLeft.setAttribute('class','divRightLeft');
+        let divText = document.createElement('div');
+        divText.setAttribute('class','div_Text');
+        divText.setAttribute('id', 'div_Text_Formation'+i);
 
         /* Affiche la date de la Formation */
         let formationDate = document.createElement('h3');
@@ -58,24 +60,37 @@ function LoadFormationContent() {
         /*Affiche le nom de la formation*/
         let formationName = document.createElement('h2');
         formationName.innerHTML += formationTable[formationClass].theme + ", " + formationTable[formationClass].name
-
+        /*Affiche la description de la formation*/
         let formationDescription = document.createElement('h3');
         formationDescription.innerHTML += formationTable[formationClass].description;
-
+        /* Affiche l'image de la formation*/
         let formationImage = document.createElement('img')
         formationImage.setAttribute('src', '../assets/png/' + formationTable[formationClass].image + '.png');
-        /*formationImage.setAttribute('class', 'articleContent_Image')*/
+        formationImage.setAttribute('class','image_Content');
 
-        document.getElementById('FormationTable').append(liFormation);
-        document.getElementById('liFormation'+i).append(divLeft, divRight);
-        document.getElementById('divLeft'+i).append(formationDate);
-        document.getElementById('divRight'+i).append(divRightLeft,divRightRight);
-        document.getElementById('divRightLeft'+i).append(formationImage);
-        document.getElementById('divRightRight'+i).append(formationName , formationDescription);
+        /*On importe les données dans le document */
+
+        /*Création des lignes du tableau*/
+        document.getElementById('formationTable').append(divFormation); 
+
+        /*Création des div date et ImageText dans des lignes*/
+        document.getElementById('divFormation'+i).append(divDate,divImageText);
+
+        /*Création de l'élément date dans la div Date*/
+        document.getElementById('div_Date_Formation'+i).append(formationDate);
+
+        /*Création des div Image et Text dans la div ImageText*/
+        document.getElementById('div_ImageText_Formation'+i).append(divImages,divText); 
+
+        /*Création de l'élément image dans la div Image */
+        document.getElementById('div_Images_Formation'+i).append(formationImage);
+
+        /*Création de l'élément Text dans la div Text */
+        document.getElementById('div_Text_Formation'+i).append(formationName,formationDescription);
         i++
     }
 }
-
+/* On active la fonction d'import de Formation */
 LoadFormationContent();
 
 

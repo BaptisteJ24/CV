@@ -232,7 +232,7 @@ a[href^=tel] {
 
 #mainArea {
 	border-top: 2px solid rgb(53, 59, 73, 0.1);
-	padding-right: 40px;
+	
 	background-color: white;
 }
 
@@ -333,87 +333,81 @@ ul {
 	max-height: 150px;
 }
 
-.article_ImageTitle {
-	display: block;
-	height: 100px;
-	width: 1240px;
+
+/* Utilisé dans experience.html*/
+#formationContent {
+	width: auto;
+	height: auto;
 }
 
-.image_article_ImageTitle {
-	float: left;
-	width: 20%;
-	border-right: 2px solid #353B49;
+.images_Title{
+	width: 50px;
+	max-height: 50px;
+	margin-right: 7px;
 }
 
-.image_article_ImageTitle img {
-	display: block;
-	margin: auto;
-	max-width: 100px;
-	max-height: 150px;
+.formationList_Container{
+	display : block;
+	width : 100%;
+	height : auto;
+	margin-top: 15px;
 }
 
-.title_article_ImageTitle {
-	float: right;
-	width: 73%;
+.experience_Table_Container{
+	display : flex;
+	flex-direction : column;
+	justify-content: space-evenly;
+	width : 100%;
+	height : 100%;
 }
-
-.title_article_ImageTitle h1 {
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-style: italic;
-	font-size: 1.5em;
-	color: #d31b1b;
-}
-
-.title_article_ImageTitle h2 {
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
-}
-
-.article_Content {
-	display: block;
-	width: 1240px;
-
-}
-
-.image_article_Content {
-	width: 1240px;
-
-}
-
-
-.image_article_Content li img {
-	display: block;
-	max-width: 100px;
-	max-height: 150px;
-}
-
-.divLeft {
-	display: block;
-	float: left;
-	width: 20%;
-	height: 200px;
-	border-right: 2px solid #353B49;
+		/* Utilisé dans content.js */
+.div_Experience_Container {
+	display : flex;
+	flex-direction : row;
+	width : 100%;
+	min-height : 150px;
 	text-align: center;
-	line-height: 200px;
+	justify-content: center;
 }
 
-.divRight {
-	display: block;
+.div_Date {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float : left; 
+	width : 20%; 
+	border-right : 2px solid black;
+}
+
+.div_Image_Text{
+	display : flex;
 	float: right;
-	width: 73%;
-	height: 200px;
+	flex-direction : row;
+	width : 80%;
+	margin: auto;
+	justify-content: center;
 }
 
-.divRightLeft {
-	display: block;
-	float: left;
-	width: 20%;
-	height: 200px;
+.div_Images {
+	float : left; 
+	width : 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.divRightRight {
-	display: block;
-	float: right;
-	width: 88%;
-	height: 200px;
+.div_Text {
+	float : right; 
+	width : 80%; 
+	text-align : justify;
+	padding-right: 15px;
+	margin: auto;
+	text-align: justify;
+}
+
+.image_Content {
+	min-width: 55%;
+	max-width: 75%;
+	min-height: 50%;
+	max-height: 75%;
 }

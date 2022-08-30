@@ -4,8 +4,8 @@ var liens_menus = {
     "index.html": "Accueil",
     "skills.html": "Compétences",
     "experience.html": "Formations et Expériences Professionnelles",
-    "projects.html": "Projets",
     "propos.html": "A Propos",
+    "projects.html": "Projets",
 };
 
 menu_container.innerHTML +='<nav class="menu" id="page__menu" name="page__menu"><ul class="menu__list r-list">';
