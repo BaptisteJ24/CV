@@ -5,8 +5,8 @@ var logoName = {
     "UnivAngers": "logo_ua",
     "Chevrollier": "logo_chevrollier",
     "StMichel": "logo_stmichel",
-    "Octave": "logo_Octave",
-    "CIO": "logo_CIO",
+    "Octave": "logo_octave",
+    "CIO": "logo_cio",
     "CC_Chateau_Gontier":"logo_CC_Chateau_Gontier",
     "MLAC":"logo_MLAC"
 };
