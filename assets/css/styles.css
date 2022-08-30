@@ -130,6 +130,7 @@ p {
 .mainDetails {
 	background-image: url(../png/Banner.png);
 	height: 130px;
+	width: 1240px;
 }
 
 .images_petit {
