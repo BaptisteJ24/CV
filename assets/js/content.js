@@ -4,7 +4,11 @@ var logoName = {
     "OpenClassrooms": "logo_OpenClassrooms",
     "UnivAngers": "logo_ua",
     "Chevrollier": "logo_chevrollier",
-    "StMichel": "logo_stmichel"
+    "StMichel": "logo_stmichel",
+    "Octave": "logo_Octave",
+    "CIO": "logo_CIO",
+    "CC_Chateau_Gontier":"logo_CC_Chateau_Gontier",
+    "MLAC":"logo_MLAC"
 };
 
 class formationClass {
@@ -95,7 +99,7 @@ LoadFormationContent();
 
 
 
-class experienceClass {
+class experienceProClass {
 
     constructor(name, startDate, endDate, lieu, description, theme, image, dev, fonction) {
         this.name = name;
@@ -111,11 +115,74 @@ class experienceClass {
 }
 
 
-let Octave = new experienceClass("Stagiaire en développement web", "01/2018","03/2018", "Octave, Angers","Refonte de la partie administrations des sites internet de l'entreprise. Utilisation des langages HTML, CSS, PHP, AngularJS et SQL. Méthode AGILE", "Informatique", "", true, "Stagiaire");
-let stMichel = new experienceClass("Stagiaire en développement web","01/2017","02/2017", "Lycée Saint-Michel, Château-Gontier-sur-Mayenne","Développement d'une application web destinée à l'administration du lycée. Utilisation des langages HTML, CSS, PHP et SQL", "Informatique",logoName["StMichel"],true, "Stagiaire");
-let PsyEN = new experienceClass("Stagiaire auprès d'un Psychologue de l'Éducation Nationale","01/2022","03/2022","CIO Mayenne Sud, Laval", "Observation et participation à des entretiens individuels. Cotation de tests psychométriques", "Sciences Humaines et Sociales, Psychologie","",false,"Stagiaire");
-let MLAC = new experienceClass("Médiateur de Lutte Anti-Covid", "08/2021","12/2021","Protection Civile du Maine et Loire, Sainte-Gemme-Sur-Loire", "Tests antigéniques tout public. Accueil administratif, prélèvements, analyse de tests, rendu de résultats. Accompagnement, prévention et sensibilisation.", "Santé","",false,"Intérimaire");
-let agentTechFL = new experienceClass("Agent Technique, Service Fête et Logistique", "07/2019","08/2019","Communauté de Communes du Pays de Château-Gontier, Château-Gontier-Sur-Mayenne","Manutention, Préparation des installations pour des événements (gradins, barnums, tentes). Montage et démontage du matériel lors des manifestations","Logistique et évènementiel","",false,"Saisonnier");
-let agentCollDechet = new experienceClass("Agent de collecte des ordures ménagères", "07/2018","08/2018","Communauté de Communes du Pays de Château-Gontier, Château-Gontier sur Mayenne","Collecte des ordures ménagères","Environnement, Hygiène","",false,"Saisonnier");
+let Octave = new experienceProClass("Stagiaire en développement web", "01/2018","03/2018", "Octave, Angers","Refonte de la partie administrations des sites internet de l'entreprise. Utilisation des langages HTML, CSS, PHP, AngularJS et SQL. Méthode AGILE", "Informatique", logoName["Octave"], true, "Stagiaire");
+let stMichel = new experienceProClass("Stagiaire en développement web","01/2017","02/2017", "Lycée Saint-Michel, Château-Gontier-sur-Mayenne","Développement d'une application web destinée à l'administration du lycée. Utilisation des langages HTML, CSS, PHP et SQL", "Informatique",logoName["StMichel"],true, "Stagiaire");
+let PsyEN = new experienceProClass("Stagiaire auprès d'un Psychologue de l'Éducation Nationale","01/2022","03/2022","CIO Mayenne Sud, Laval", "Observation et participation à des entretiens individuels. Cotation de tests psychométriques", "Sciences Humaines et Sociales, Psychologie",logoName["CIO"],false,"Stagiaire");
+let MLAC = new experienceProClass("Médiateur de Lutte Anti-Covid", "08/2021","12/2021","Protection Civile du Maine et Loire, Sainte-Gemme-Sur-Loire", "Tests antigéniques tout public. Accueil administratif, prélèvements, analyse de tests, rendu de résultats. Accompagnement, prévention et sensibilisation.", "Santé",logoName["MLAC"],false,"Intérimaire");
+let agentTechFL = new experienceProClass("Agent Technique, Service Fête et Logistique", "07/2019","08/2019","Communauté de Communes du Pays de Château-Gontier, Château-Gontier-Sur-Mayenne","Manutention, Préparation des installations pour des événements (gradins, barnums, tentes). Montage et démontage du matériel lors des manifestations","Logistique et évènementiel",logoName["CC_Chateau_Gontier"],false,"Saisonnier");
+let agentCollDechet = new experienceProClass("Agent de collecte des ordures ménagères", "07/2018","08/2018","Communauté de Communes du Pays de Château-Gontier, Château-Gontier sur Mayenne","Collecte des ordures ménagères","Environnement, Hygiène",logoName["CC_Chateau_Gontier"],false,"Saisonnier");
 
 
+let experienceProTable = [PsyEN,MLAC,agentTechFL,agentCollDechet,Octave,stMichel];
+
+function LoadExperienceProContent() {
+    var i = 0;
+    for (experienceProClass in experienceProTable) {
+        let divExperiencePro = document.createElement('div');
+        divExperiencePro.setAttribute('class','div_Experience_Container');
+        divExperiencePro.setAttribute('id','divExperiencePro'+i);
+
+        let divDate = document.createElement('div');
+        divDate.setAttribute('class','div_Date');
+        divDate.setAttribute('id', 'div_Date_ExperiencePro'+i);
+
+        let divImageText = document.createElement('div');
+        divImageText.setAttribute('class','div_Image_Text');
+        divImageText.setAttribute('id', 'div_ImageText_ExperiencePro'+i);
+
+        let divImages = document.createElement('div');
+        divImages.setAttribute('class','div_Images');
+        divImages.setAttribute('id', 'div_Images_ExperiencePro'+i);
+
+        let divText = document.createElement('div');
+        divText.setAttribute('class','div_Text');
+        divText.setAttribute('id', 'div_Text_ExperiencePro'+i);
+
+        /* Affiche la date de la ExperiencePro */
+        let experienceProDate = document.createElement('h3');
+        experienceProDate.innerHTML += experienceProTable[experienceProClass].startDate + "- <br/>" + experienceProTable[experienceProClass].endDate;
+        /*Affiche le nom de la ExperiencePro*/
+        let experienceProName = document.createElement('h2');
+        experienceProName.innerHTML += experienceProTable[experienceProClass].theme + ", " + experienceProTable[experienceProClass].name
+        /*Affiche la description de la ExperiencePro*/
+        let experienceProDescription = document.createElement('h3');
+        experienceProDescription.innerHTML += experienceProTable[experienceProClass].description;
+        /* Affiche l'image de la ExperiencePro*/
+        let experienceProImage = document.createElement('img')
+        experienceProImage.setAttribute('src', '../assets/png/' + experienceProTable[experienceProClass].image + '.png');
+        experienceProImage.setAttribute('class','image_Content');
+
+        /*On importe les données dans le document */
+
+        /*Création des lignes du tableau*/
+        document.getElementById('experienceProTable').append(divExperiencePro); 
+
+        /*Création des div date et ImageText dans des lignes*/
+        document.getElementById('divExperiencePro'+i).append(divDate,divImageText);
+
+        /*Création de l'élément date dans la div Date*/
+        document.getElementById('div_Date_ExperiencePro'+i).append(experienceProDate);
+
+        /*Création des div Image et Text dans la div ImageText*/
+        document.getElementById('div_ImageText_ExperiencePro'+i).append(divImages,divText); 
+
+        /*Création de l'élément image dans la div Image */
+        document.getElementById('div_Images_ExperiencePro'+i).append(experienceProImage);
+
+        /*Création de l'élément Text dans la div Text */
+        document.getElementById('div_Text_ExperiencePro'+i).append(experienceProName,experienceProDescription);
+        i++
+    }
+}
+
+LoadExperienceProContent();
