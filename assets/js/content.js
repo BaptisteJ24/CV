@@ -112,7 +112,7 @@ function LoadFormationContent() {
         formationPlace.innerHTML += formationTable[formationClass].place;
 
         if (formationTable[formationClass].othersDetails !== null) {
-            formationPlace.innerHTML += formationTable[formationClass].othersDetails;
+            formationPlace.innerHTML += ", " + formationTable[formationClass].othersDetails;
         }
 
         let formationDescription = document.createElement('h3');
