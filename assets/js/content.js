@@ -127,7 +127,7 @@ function LoadFormationContent() {
 
 
         function appendFormationContent() {
-            document.getElementById('formationTable').append(divFormation);
+            document.getElementById('formation_Table').append(divFormation);
             document.getElementById('divFormation' + i).append(divImages, divDateText);
             document.getElementById('div_DateText_Formation' + i).append(divDate, divText);
             document.getElementById('div_Date_Formation' + i).append(formationDate);
@@ -276,12 +276,24 @@ function LoadExperienceProContent() {
 
 
         function appendExperienceContent() {
-            document.getElementById('experienceProTable').append(divExperiencePro);
-            document.getElementById('divExperiencePro' + i).append(divImages, divDateText);
-            document.getElementById('div_DateText_ExperiencePro' + i).append(divDate, divText);
-            document.getElementById('div_Date_ExperiencePro' + i).append(experienceProDate);
-            document.getElementById('div_Images_ExperiencePro' + i).append(experienceProImages);
-            document.getElementById('div_Text_ExperiencePro' + i).append(experienceProName, experienceProPlace, experienceProDescription);
+
+            if (experienceProTable[experienceProClass].dev === true) {
+
+                document.getElementById('experienceProDev_Table').append(divExperiencePro);
+                document.getElementById('divExperiencePro' + i).append(divImages, divDateText);
+                document.getElementById('div_DateText_ExperiencePro' + i).append(divDate, divText);
+                document.getElementById('div_Date_ExperiencePro' + i).append(experienceProDate);
+                document.getElementById('div_Images_ExperiencePro' + i).append(experienceProImages);
+                document.getElementById('div_Text_ExperiencePro' + i).append(experienceProName, experienceProPlace, experienceProDescription);
+            }
+            else{
+                document.getElementById('experienceProOthers_Table').append(divExperiencePro);
+                document.getElementById('divExperiencePro' + i).append(divImages, divDateText);
+                document.getElementById('div_DateText_ExperiencePro' + i).append(divDate, divText);
+                document.getElementById('div_Date_ExperiencePro' + i).append(experienceProDate);
+                document.getElementById('div_Images_ExperiencePro' + i).append(experienceProImages);
+                document.getElementById('div_Text_ExperiencePro' + i).append(experienceProName, experienceProPlace, experienceProDescription);
+            }
         }
 
         appendExperienceContent();
