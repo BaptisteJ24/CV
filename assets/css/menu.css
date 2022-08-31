@@ -159,3 +159,11 @@ TEXT UNDERLINED
   background-color: #353B49;
   --rLinkColor: var(--menuLinkColorChange, white);
 }
+
+.menu__link2:hover .images_Title_White{
+	display: inline;
+}
+
+.menu__link2:hover .images_Title{
+	display: none;
+}
