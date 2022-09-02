@@ -8,83 +8,80 @@
 	<meta name="description" content="The Curriculum Vitae of Baptiste JAN." />
 	<meta charset="UTF-8">
 
-
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link type="text/css" rel="stylesheet" href="../assets/css/menu.css">
 	<link type="text/css" rel="stylesheet" href="../assets/css/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
-
 </head>
 
-<body>
-	<div id="cv">
-		<div class="mainDetails"></div>
-		<div id="menu"></div>
-
-
-		<div id="mainArea">
-			<div id="menu2" class="menu2">
-				<a href="#" class="menu__link2 r-link" id="formation_Link"><img src="../assets/png/formation.png"
-						alt="formation.png" class="images_Menu2"><img src="../assets/png/formation_White.png"
-						alt="formation_White.png" class="images_Menu2_White">Formations</a>
-				<a href="#" class="menu__link2 r-link" id="experiencePro_Link"><img
-						src="../assets/png/experiencePro.png" alt="experiencePro.png" class="images_Menu2"><img
-						src="../assets/png/experiencePro_White.png" alt="experiencePro_White.png"
-						class="images_Menu2_White">Expériences Professionnelles</a>
-			</div>
-			<section id="formationContent">
-				<!--Contenu de "Formation"-->
-				<article class="experienceList_Container">
-					<div class="_Container">
-						<div class="div_Images_Title">
-							<img src="../assets/png/formation.png" alt="formation.png">
-						</div>
-						<div class="div_Title">
-							<h1>Formations</h1>
-						</div>
-					</div>
-					<div id="formation_Table" class="experience_Table_Container">
-						<!--Contenu dans ../assets/js/content.js. Voir formationClass et formationTable-->
-					</div>
-				</article>
-				<div class="clear"></div>
-			</section>
-
-			<section id="experienceProContent">
-				<!--Contenu de "Formation"-->
-				<article class="experienceList_Container">
-					<div class="_Container">
-						<div class="div_Images_Title">
-							<img src="../assets/png/experienceProDev.png" alt="experienceProDev.png">
-						</div>
-						<div class="div_Title">
-							<h1>Expériences en Développement</h1>
-						</div>
-					</div>
-					<div id="experienceProDev_Table" class="experience_Table_Container"></div>
-
-					<div class="_Container">
-						<div class="div_Images_Title">
-							<img src="../assets/png/experiencePro.png" alt="experiencePro.png">
-						</div>
-						<div class="div_Title">
-							<h1>Autres Expériences</h1>
-						</div>
-					</div>
-					<div id="experienceProOthers_Table" class="experience_Table_Container"></div>
-				</article>
-				<div class="clear"></div>
-			</section>
+<body id="cv">
+	<header class="mainDetails" id="mainDetails"></header>
+	<div id="mainArea">
+		<div id="menu2" class="menu2">
+			<a href="#" class="menu__link2 r-link" id="formation_Link"><img src="../assets/png/formation.png"
+					alt="formation.png" class="images_Menu2"><img src="../assets/png/formation_White.png"
+					alt="formation_White.png" class="images_Menu2_White">Formations</a>
+			<a href="#" class="menu__link2 r-link" id="experiencePro_Link"><img src="../assets/png/experiencePro.png"
+					alt="experiencePro.png" class="images_Menu2"><img src="../assets/png/experiencePro_White.png"
+					alt="experiencePro_White.png" class="images_Menu2_White">Expériences Professionnelles</a>
 		</div>
+		<section id="formationContent">
+			<!--Contenu de "Formation"-->
+			<article class="experienceList_Container">
+				<div class="_Container">
+					<div class="div_Images_Title">
+						<img src="../assets/png/formation.png" alt="formation.png">
+					</div>
+					<div class="div_Title">
+						<h1>Formations</h1>
+					</div>
+				</div>
+				<div id="formation_Table" class="experience_Table_Container">
+					<!--Contenu dans ../assets/js/content.js. Voir formationClass et formationTable-->
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+
+		<section id="experienceProContent">
+			<!--Contenu de "Formation"-->
+			<article class="experienceList_Container">
+				<div class="_Container">
+					<div class="div_Images_Title">
+						<img src="../assets/png/experienceProDev.png" alt="experienceProDev.png">
+					</div>
+					<div class="div_Title">
+						<h1>Expériences en Développement</h1>
+					</div>
+				</div>
+				<div id="experienceProDev_Table" class="experience_Table_Container"></div>
+
+				<div class="_Container">
+					<div class="div_Images_Title">
+						<img src="../assets/png/experiencePro.png" alt="experiencePro.png">
+					</div>
+					<div class="div_Title">
+						<h1>Autres Expériences</h1>
+					</div>
+				</div>
+				<div id="experienceProOthers_Table" class="experience_Table_Container"></div>
+			</article>
+			<div class="clear"></div>
+		</section>
 	</div>
+	<footer class="footer_Container">
+		Copyright &copy; <a href="https://baptiste-jan.fr" target="_blank">baptiste-jan.fr</a>
+	</footer>
+
+
+	<!-------------------------------------------- Script JS --------------------------------------->
 	<script src="../assets/js/content.js"></script>
 	<script src="../assets/js/menu2.js"></script>
 	<script src="../assets/js/menu.js"></script>
 
 	<!-- Bootstrap JS bundle -->
-
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
 		crossorigin="anonymous"></script>

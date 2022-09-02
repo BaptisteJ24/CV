@@ -98,6 +98,11 @@ body {
 	color: #222;
 }
 
+a{
+	color: currentColor;
+	text-decoration: none;
+
+}
 
 a:visited {
 	color: currentColor;
@@ -162,34 +167,6 @@ p {
 	height: 200px;
 	margin-left: -20px;
 	margin-top: -18px;
-}
-
-#mainDetails {
-	display: flex;
-	align-items: center;
-	float: left;
-	height: 130px;
-	color: aliceblue;
-	text-align: center;
-	margin-left: 90px;
-}
-
-#mainDetails h1 {
-	font-size: 2em;
-	font-weight: 700;
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	color: aliceblue;
-}
-
-#mainDetails h2 {
-	font-size: 1.3em;
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-}
-
-#mainDetails h3 {
-	font-size: 2em;
-	margin-left: 2px;
-	font-family: "Times New Roman", Times, serif;
 }
 
 #contactDetails {
@@ -500,4 +477,15 @@ ul {
 	border-top: 2px dashed black;
 	border-bottom: 2px dashed black;
 	padding: 10px;
+}
+
+
+.footer_Container{
+	padding: 2%;
+	margin: auto;
+	background-color: #353b49;
+	color: aliceblue;
+	font-size: 1.2em;
+	font-style: italic;
+	text-align: center;
 }
