@@ -160,10 +160,10 @@ TEXT UNDERLINED
   --rLinkColor: var(--menuLinkColorChange, white);
 }
 
-.menu__link2:hover .images_Title_White{
+.menu__link2:hover .images_Menu2_White{
 	display: inline;
 }
 
-.menu__link2:hover .images_Title{
+.menu__link2:hover .images_Menu2{
 	display: none;
 }
