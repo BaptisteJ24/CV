@@ -131,7 +131,7 @@ p {
 #cv {
 	width: 1240px;
 	height: auto;
-	background: #f4f4f4;
+	background: white;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -245,22 +245,17 @@ section:first-child {
 
 }
 
-.sectionTitle h2 {
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
 
-}
-
-.sectionTitle {
+.sectionContent{
 	float: right;
 	width: 73%;
 }
 
-.sectionTitle h1 {
+.sectionContent h1{
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-size: 2em;
-	color: black;
+	
 	padding: 10px;
 	margin-right: 5%;
 }
@@ -303,9 +298,11 @@ ul {
 	list-style-type: none;
 }
 
-.image_SectionTitle {
+.image_Title {
 	display: block;
 	margin: auto;
+	width: 40%;
+	height: auto;
 }
 
 .articleContent_Image {

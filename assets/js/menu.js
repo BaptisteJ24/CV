@@ -11,7 +11,7 @@ menu_List = document.createElement('ul');
 menu_List.setAttribute('class','menu__list r-list');
 
 var liens_menus = {
-    "index.html": "Accueil",
+    "index.html": "Présentation",
     "skills.html": "Compétences",
     "experience.html": "Formations et Expériences Professionnelles",
     "propos.html": "A Propos",
